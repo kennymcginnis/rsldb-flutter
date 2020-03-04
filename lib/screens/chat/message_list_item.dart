@@ -2,11 +2,11 @@ import 'package:avataaar_image/avataaar_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ringl8/components/loading.dart';
-import 'package:ringl8/components/user_avatar.dart';
-import 'package:ringl8/main.dart';
-import 'package:ringl8/models/user.dart';
-import 'package:ringl8/routes/app_state.dart';
+import 'package:rsldb/components/loading.dart';
+import 'package:rsldb/components/user_avatar.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/models/user.dart';
+import 'package:rsldb/routes/app_state.dart';
 
 class MessageListItem extends StatelessWidget {
   final DocumentSnapshot messageSnapshot;

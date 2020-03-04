@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ringl8/main.dart';
-import 'package:ringl8/models/message.dart';
-import 'package:ringl8/routes/app_state.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/models/message.dart';
+import 'package:rsldb/routes/app_state.dart';
 
 class MessageService {
   final CollectionReference messageCollection = Firestore.instance.collection('messages');

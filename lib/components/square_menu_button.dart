@@ -1,7 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ringl8/routes/application.dart';
+import 'package:rsldb/routes/application.dart';
 
 class SquareMenuButton extends StatelessWidget {
   final IconData icon;

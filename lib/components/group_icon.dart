@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:ringl8/helpers/color_helpers.dart';
-import 'package:ringl8/models/group.dart';
+import 'package:rsldb/helpers/color_helpers.dart';
+import 'package:rsldb/models/group.dart';
 
 enum Size {
   small,

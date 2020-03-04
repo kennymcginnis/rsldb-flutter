@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
-import 'package:ringl8/components/extended_button.dart';
-import 'package:ringl8/components/group_icon.dart';
-import 'package:ringl8/components/input_text_field.dart';
-import 'package:ringl8/helpers/flushbar.dart';
-import 'package:ringl8/helpers/validators.dart';
-import 'package:ringl8/main.dart';
-import 'package:ringl8/models/group.dart';
-import 'package:ringl8/routes/app_state.dart';
-import 'package:ringl8/services/group.dart';
+import 'package:rsldb/components/extended_button.dart';
+import 'package:rsldb/components/group_icon.dart';
+import 'package:rsldb/components/input_text_field.dart';
+import 'package:rsldb/helpers/flushbar.dart';
+import 'package:rsldb/helpers/validators.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/models/group.dart';
+import 'package:rsldb/routes/app_state.dart';
+import 'package:rsldb/services/group.dart';
 
 class CustomizeGroup extends StatefulWidget {
   @override

@@ -1,11 +1,11 @@
 import 'package:provider/provider.dart';
-import 'package:ringl8/models/event.dart';
-import 'package:ringl8/models/group.dart';
-import 'package:ringl8/models/user.dart';
-import 'package:ringl8/models/wrapper.dart';
-import 'package:ringl8/services/event.dart';
-import 'package:ringl8/services/group.dart';
-import 'package:ringl8/services/user.dart';
+import 'package:rsldb/models/event.dart';
+import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/user.dart';
+import 'package:rsldb/models/wrapper.dart';
+import 'package:rsldb/services/event.dart';
+import 'package:rsldb/services/group.dart';
+import 'package:rsldb/services/user.dart';
 
 StreamProvider<User> userProvider() {
   return StreamProvider<User>.value(

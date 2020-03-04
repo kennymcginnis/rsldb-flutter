@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ringl8/main.dart';
-import 'package:ringl8/models/event.dart';
-import 'package:ringl8/routes/app_state.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/models/event.dart';
+import 'package:rsldb/routes/app_state.dart';
 
 class EventService {
   final String uid;

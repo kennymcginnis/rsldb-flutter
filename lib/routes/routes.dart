@@ -1,5 +1,5 @@
 import 'package:fluro/fluro.dart';
-import 'package:ringl8/routes/route_handlers.dart';
+import 'package:rsldb/routes/route_handlers.dart';
 
 class Routes {
   static String root = '/';

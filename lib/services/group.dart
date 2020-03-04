@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ringl8/main.dart';
-import 'package:ringl8/models/group.dart';
-import 'package:ringl8/models/wrapper.dart';
-import 'package:ringl8/routes/app_state.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/wrapper.dart';
+import 'package:rsldb/routes/app_state.dart';
 
 class GroupService {
   final CollectionReference groupCollection = Firestore.instance.collection('groups');

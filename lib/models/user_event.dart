@@ -1,4 +1,4 @@
-import 'package:ringl8/models/user.dart';
+import 'package:rsldb/models/user.dart';
 
 class UserEvent {
   final User user;

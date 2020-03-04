@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
-import 'package:ringl8/models/auth_user.dart';
-import 'package:ringl8/routes/app_state.dart';
-import 'package:ringl8/routes/application.dart';
-import 'package:ringl8/routes/routes.dart';
-import 'package:ringl8/services/auth.dart';
-import 'package:ringl8/theme/theme.dart';
+import 'package:rsldb/models/auth_user.dart';
+import 'package:rsldb/routes/app_state.dart';
+import 'package:rsldb/routes/application.dart';
+import 'package:rsldb/routes/routes.dart';
+import 'package:rsldb/services/auth.dart';
+import 'package:rsldb/theme/theme.dart';
 
 // This is our global ServiceLocator
 GetIt sl = GetIt.instance;
@@ -38,7 +38,7 @@ class AppComponentState extends State<AppComponent> {
     return StreamProvider<AuthUser>.value(
       value: AuthService().user,
       child: MaterialApp(
-        title: 'ringl8',
+        title: 'rsldb',
         debugShowCheckedModeBanner: false,
         theme: appTheme,
         onGenerateRoute: Application.router.generator,

@@ -2,14 +2,14 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ringl8/components/extended_button.dart';
-import 'package:ringl8/components/input_text_field.dart';
-import 'package:ringl8/components/loading.dart';
-import 'package:ringl8/helpers/validators.dart';
-import 'package:ringl8/models/user.dart';
-import 'package:ringl8/routes/application.dart';
-import 'package:ringl8/services/auth.dart';
-import 'package:ringl8/services/user.dart';
+import 'package:rsldb/components/extended_button.dart';
+import 'package:rsldb/components/input_text_field.dart';
+import 'package:rsldb/components/loading.dart';
+import 'package:rsldb/helpers/validators.dart';
+import 'package:rsldb/models/user.dart';
+import 'package:rsldb/routes/application.dart';
+import 'package:rsldb/services/auth.dart';
+import 'package:rsldb/services/user.dart';
 
 class RegisterForm extends StatefulWidget {
   RegisterForm({Key key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ringl8/main.dart';
-import 'package:ringl8/models/user.dart';
-import 'package:ringl8/routes/app_state.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/models/user.dart';
+import 'package:rsldb/routes/app_state.dart';
 
 class UserService {
   final CollectionReference userCollection = Firestore.instance.collection('users');

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:ringl8/components/folding_cell.dart';
-import 'package:ringl8/components/user_avatar.dart';
-import 'package:ringl8/models/event.dart';
-import 'package:ringl8/models/user_event.dart';
-import 'package:ringl8/services/event.dart';
+import 'package:rsldb/components/folding_cell.dart';
+import 'package:rsldb/components/user_avatar.dart';
+import 'package:rsldb/models/event.dart';
+import 'package:rsldb/models/user_event.dart';
+import 'package:rsldb/services/event.dart';
 
 import 'styles.dart';
 

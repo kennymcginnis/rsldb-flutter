@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:ringl8/models/user.dart';
+import 'package:rsldb/models/user.dart';
 
 part 'message.g.dart';
 

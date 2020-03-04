@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:ringl8/components/loading.dart';
-import 'package:ringl8/main.dart';
-import 'package:ringl8/models/choice.dart';
-import 'package:ringl8/models/event.dart';
-import 'package:ringl8/models/user.dart';
-import 'package:ringl8/models/user_event.dart';
-import 'package:ringl8/routes/app_state.dart';
-import 'package:ringl8/screens/calendar/event_list.dart';
-import 'package:ringl8/screens/calendar/styles.dart';
+import 'package:rsldb/components/loading.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/models/choice.dart';
+import 'package:rsldb/models/event.dart';
+import 'package:rsldb/models/user.dart';
+import 'package:rsldb/models/user_event.dart';
+import 'package:rsldb/routes/app_state.dart';
+import 'package:rsldb/screens/calendar/event_list.dart';
+import 'package:rsldb/screens/calendar/styles.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class CalendarView extends StatefulWidget {
@@ -55,7 +55,7 @@ class _CalendarViewState extends State<CalendarView> with TickerProviderStateMix
   List<Choice> choices = <Choice>[
     Choice(title: '- All -', icon: Icon(Icons.remove, color: ICON_COLOR[UNKNOWN])),
     Choice(title: '- Off -', icon: Icon(Icons.offline_bolt, color: ICON_COLOR[RED])),
-    Choice(title: '- ringl8 -', icon: Icon(Icons.directions_run, color: ICON_COLOR[YELLOW])),
+    Choice(title: '- rsldb -', icon: Icon(Icons.directions_run, color: ICON_COLOR[YELLOW])),
     Choice(title: '- Ready -', icon: Icon(Icons.drive_eta, color: ICON_COLOR[GREEN])),
   ];
 

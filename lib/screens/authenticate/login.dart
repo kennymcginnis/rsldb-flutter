@@ -3,12 +3,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:ringl8/components/extended_button.dart';
-import 'package:ringl8/components/input_text_field.dart';
-import 'package:ringl8/components/loading.dart';
-import 'package:ringl8/helpers/validators.dart';
-import 'package:ringl8/routes/application.dart';
-import 'package:ringl8/services/auth.dart';
+import 'package:rsldb/components/extended_button.dart';
+import 'package:rsldb/components/input_text_field.dart';
+import 'package:rsldb/components/loading.dart';
+import 'package:rsldb/helpers/validators.dart';
+import 'package:rsldb/routes/application.dart';
+import 'package:rsldb/services/auth.dart';
 
 class LoginForm extends StatefulWidget {
   LoginForm({Key key}) : super(key: key);

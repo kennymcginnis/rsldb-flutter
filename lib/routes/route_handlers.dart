@@ -1,20 +1,20 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ringl8/main.dart';
-import 'package:ringl8/models/auth_user.dart';
-import 'package:ringl8/routes/app_state.dart';
-import 'package:ringl8/routes/stream_providers.dart';
-import 'package:ringl8/screens/authenticate/auth_form.dart';
-import 'package:ringl8/screens/calendar/calendar_view.dart';
-import 'package:ringl8/screens/chat/chat.dart';
-import 'package:ringl8/screens/group/customize.dart';
-import 'package:ringl8/screens/group/home.dart';
-import 'package:ringl8/screens/group/members.dart';
-import 'package:ringl8/screens/home/home.dart';
-import 'package:ringl8/screens/user/groups.dart';
-import 'package:ringl8/screens/user/settings.dart';
-import 'package:ringl8/services/auth.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/models/auth_user.dart';
+import 'package:rsldb/routes/app_state.dart';
+import 'package:rsldb/routes/stream_providers.dart';
+import 'package:rsldb/screens/authenticate/auth_form.dart';
+import 'package:rsldb/screens/calendar/calendar_view.dart';
+import 'package:rsldb/screens/chat/chat.dart';
+import 'package:rsldb/screens/group/customize.dart';
+import 'package:rsldb/screens/group/home.dart';
+import 'package:rsldb/screens/group/members.dart';
+import 'package:rsldb/screens/home/home.dart';
+import 'package:rsldb/screens/user/groups.dart';
+import 'package:rsldb/screens/user/settings.dart';
+import 'package:rsldb/services/auth.dart';
 
 final application = sl.get<AppState>();
 

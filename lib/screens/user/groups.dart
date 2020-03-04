@@ -2,16 +2,16 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:ringl8/components/group_icon.dart';
-import 'package:ringl8/helpers/flushbar.dart';
-import 'package:ringl8/main.dart';
-import 'package:ringl8/models/choice.dart';
-import 'package:ringl8/models/group.dart';
-import 'package:ringl8/models/wrapper.dart';
-import 'package:ringl8/routes/app_state.dart';
-import 'package:ringl8/routes/application.dart';
-import 'package:ringl8/screens/group/create.dart';
-import 'package:ringl8/services/group.dart';
+import 'package:rsldb/components/group_icon.dart';
+import 'package:rsldb/helpers/flushbar.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/models/choice.dart';
+import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/wrapper.dart';
+import 'package:rsldb/routes/app_state.dart';
+import 'package:rsldb/routes/application.dart';
+import 'package:rsldb/screens/group/create.dart';
+import 'package:rsldb/services/group.dart';
 
 class UsersGroups extends StatelessWidget {
   final application = sl.get<AppState>();

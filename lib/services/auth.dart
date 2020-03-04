@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:ringl8/models/auth_user.dart';
+import 'package:rsldb/models/auth_user.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;

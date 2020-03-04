@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:ringl8/models/choice.dart';
-import 'package:ringl8/screens/authenticate/login.dart';
-import 'package:ringl8/screens/authenticate/register.dart';
+import 'package:rsldb/models/choice.dart';
+import 'package:rsldb/screens/authenticate/login.dart';
+import 'package:rsldb/screens/authenticate/register.dart';
 
 class AuthForm extends StatelessWidget {
   @override

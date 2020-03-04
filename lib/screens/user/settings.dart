@@ -2,16 +2,16 @@ import 'package:avataaar_image/avataaar_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:ringl8/components/extended_button.dart';
-import 'package:ringl8/components/input_text_field.dart';
-import 'package:ringl8/components/loading.dart';
-import 'package:ringl8/components/user_avatar.dart';
-import 'package:ringl8/helpers/avatar_helpers.dart';
-import 'package:ringl8/helpers/flushbar.dart';
-import 'package:ringl8/helpers/validators.dart';
-import 'package:ringl8/models/choice.dart';
-import 'package:ringl8/models/user.dart';
-import 'package:ringl8/services/user.dart';
+import 'package:rsldb/components/extended_button.dart';
+import 'package:rsldb/components/input_text_field.dart';
+import 'package:rsldb/components/loading.dart';
+import 'package:rsldb/components/user_avatar.dart';
+import 'package:rsldb/helpers/avatar_helpers.dart';
+import 'package:rsldb/helpers/flushbar.dart';
+import 'package:rsldb/helpers/validators.dart';
+import 'package:rsldb/models/choice.dart';
+import 'package:rsldb/models/user.dart';
+import 'package:rsldb/services/user.dart';
 
 class SettingsForm extends StatefulWidget {
   @override

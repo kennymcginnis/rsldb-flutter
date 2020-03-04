@@ -4,11 +4,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ringl8/main.dart';
-import 'package:ringl8/routes/app_state.dart';
-import 'package:ringl8/screens/chat/animated_list.dart';
-import 'package:ringl8/screens/chat/message_list_item.dart';
-import 'package:ringl8/services/message.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/routes/app_state.dart';
+import 'package:rsldb/screens/chat/animated_list.dart';
+import 'package:rsldb/screens/chat/message_list_item.dart';
+import 'package:rsldb/services/message.dart';
 
 class ChatScreen extends StatefulWidget {
   final auth = FirebaseAuth.instance;

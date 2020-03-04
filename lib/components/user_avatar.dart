@@ -1,6 +1,6 @@
 import 'package:avataaar_image/avataaar_image.dart';
 import 'package:flutter/material.dart';
-import 'package:ringl8/models/user.dart';
+import 'package:rsldb/models/user.dart';
 
 enum AvatarSize {
   small,

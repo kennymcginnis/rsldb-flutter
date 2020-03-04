@@ -1,4 +1,4 @@
-package com.ringl8.running.late
+package com.rsldb.running.late
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

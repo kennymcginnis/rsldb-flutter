@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ringl8/components/extended_button.dart';
-import 'package:ringl8/components/input_text_field.dart';
-import 'package:ringl8/components/loading.dart';
-import 'package:ringl8/helpers/flushbar.dart';
-import 'package:ringl8/helpers/validators.dart';
-import 'package:ringl8/services/group.dart';
+import 'package:rsldb/components/extended_button.dart';
+import 'package:rsldb/components/input_text_field.dart';
+import 'package:rsldb/components/loading.dart';
+import 'package:rsldb/helpers/flushbar.dart';
+import 'package:rsldb/helpers/validators.dart';
+import 'package:rsldb/services/group.dart';
 
 class CreateGroup extends StatefulWidget {
   @override

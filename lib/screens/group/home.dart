@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:ringl8/components/loading.dart';
-import 'package:ringl8/components/square_menu_button.dart';
-import 'package:ringl8/main.dart';
-import 'package:ringl8/models/group.dart';
-import 'package:ringl8/routes/app_state.dart';
-import 'package:ringl8/services/group.dart';
+import 'package:rsldb/components/loading.dart';
+import 'package:rsldb/components/square_menu_button.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/models/group.dart';
+import 'package:rsldb/routes/app_state.dart';
+import 'package:rsldb/services/group.dart';
 
 class GroupHome extends StatelessWidget {
   final application = sl.get<AppState>();
