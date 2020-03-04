@@ -5,8 +5,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:rsldb/components/group_icon.dart';
 import 'package:rsldb/components/square_menu_button.dart';
+import 'package:rsldb/components/user_avatar.dart';
 import 'package:rsldb/main.dart';
 import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/user.dart';
 import 'package:rsldb/models/wrapper.dart';
 import 'package:rsldb/routes/app_state.dart';
 import 'package:rsldb/routes/application.dart';
@@ -18,10 +20,18 @@ class HomeComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final childRatio = (size.width / size.height) * 2.5;
+    User _currentUser = Provider.of<User>(context);
     List<Group> _currentGroups = Provider.of<Membership>(context)?.membership ?? [];
     return Scaffold(
       appBar: AppBar(
-        title: Text('rsldb (running late)'),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            UserAvatar(user: _currentUser, size: AvatarSize.small),
+            SizedBox(width: 10.0),
+            Text('RINGL8 (running late)'),
+          ],
+        ),
         centerTitle: true,
         elevation: 0.0,
       ),

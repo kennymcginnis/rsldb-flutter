@@ -1,16 +1,16 @@
 {
   "project_info": {
     "project_number": "286040600088",
-    "firebase_url": "https://rsldb-firebase.firebaseio.com",
-    "project_id": "rsldb-firebase",
-    "storage_bucket": "rsldb-firebase.appspot.com"
+    "firebase_url": "https://rsl-db.firebaseio.com",
+    "project_id": "rsl-db",
+    "storage_bucket": "rsl-db.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:286040600088:android:8b30a30225943b87bcdd6d",
         "android_client_info": {
-          "package_name": "com.rsldb.running.late"
+          "package_name": "com.rsl.db"
         }
       },
       "oauth_client": [

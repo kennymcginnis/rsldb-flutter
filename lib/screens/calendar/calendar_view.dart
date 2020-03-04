@@ -55,7 +55,7 @@ class _CalendarViewState extends State<CalendarView> with TickerProviderStateMix
   List<Choice> choices = <Choice>[
     Choice(title: '- All -', icon: Icon(Icons.remove, color: ICON_COLOR[UNKNOWN])),
     Choice(title: '- Off -', icon: Icon(Icons.offline_bolt, color: ICON_COLOR[RED])),
-    Choice(title: '- rsldb -', icon: Icon(Icons.directions_run, color: ICON_COLOR[YELLOW])),
+    Choice(title: '- ringl8 -', icon: Icon(Icons.directions_run, color: ICON_COLOR[YELLOW])),
     Choice(title: '- Ready -', icon: Icon(Icons.drive_eta, color: ICON_COLOR[GREEN])),
   ];
 
@@ -270,7 +270,7 @@ class _CalendarViewState extends State<CalendarView> with TickerProviderStateMix
       mapOutput.putIfAbsent(eventDateTime, () => defaults.toList());
 
       UserEvent userEvent =
-          mapOutput[eventDateTime].firstWhere((userEvent) => userEvent.user.uid == event.userUID);
+          mapOutput[eventDateTime].firstWhere((userEvent) => userEvent.user.uid == event.user);
       userEvent.uid = event.uid;
       userEvent.status = event.status;
     });
