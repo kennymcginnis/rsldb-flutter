@@ -23,7 +23,7 @@ class RegisterFormState extends State<RegisterForm> {
   final _formKey = GlobalKey<FormState>();
 
   bool _loading = false;
-  String _firstName;
+  String _userName;
   String _lastName;
   String _email = 'kenneth.j.mcginnis@gmail.com';
   String _password = 'Millennia@9';
@@ -41,7 +41,7 @@ class RegisterFormState extends State<RegisterForm> {
         });
       } else {
         await UserService().updateUser(user.copyWith(
-          firstName: _firstName,
+          userName: _userName,
           lastName: _lastName,
         ));
         Application.router.navigateTo(context, '/', transition: TransitionType.fadeIn);
@@ -62,9 +62,9 @@ class RegisterFormState extends State<RegisterForm> {
               SizedBox(height: 40.0),
               InputTextField(
                 icon: Icons.person,
-                initialValue: _firstName,
+                initialValue: _userName,
                 labelText: 'First Name',
-                onChanged: (value) => setState(() => _firstName = value),
+                onChanged: (value) => setState(() => _userName = value),
                 validator: (value) => Validators.validateString(value, 'first name'),
               ),
               SizedBox(height: 10.0),

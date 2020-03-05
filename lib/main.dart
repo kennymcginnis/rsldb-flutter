@@ -38,7 +38,7 @@ class AppComponentState extends State<AppComponent> {
     return StreamProvider<AuthUser>.value(
       value: AuthService().user,
       child: MaterialApp(
-        title: 'ringl8',
+        title: 'rsldb',
         debugShowCheckedModeBanner: false,
         theme: appTheme,
         onGenerateRoute: Application.router.generator,

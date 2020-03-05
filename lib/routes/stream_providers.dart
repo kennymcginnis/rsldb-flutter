@@ -1,11 +1,11 @@
 import 'package:provider/provider.dart';
-import 'package:rsldb/models/event.dart';
-import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/champion.dart';
+import 'package:rsldb/models/faction.dart';
 import 'package:rsldb/models/user.dart';
 import 'package:rsldb/models/user_group.dart';
 import 'package:rsldb/models/wrapper.dart';
-import 'package:rsldb/services/event.dart';
-import 'package:rsldb/services/group.dart';
+import 'package:rsldb/services/champion.dart';
+import 'package:rsldb/services/faction.dart';
 import 'package:rsldb/services/user.dart';
 import 'package:rsldb/services/user_group.dart';
 

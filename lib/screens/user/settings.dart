@@ -24,7 +24,7 @@ class _SettingsFormState extends State<SettingsForm> {
   final String selectedUrl = 'https://getavataaars.com/';
 
   User _currentUser;
-  String _currentFirstName;
+  String _currentuserName;
   String _currentLastName;
   String _currentEmail;
 
@@ -76,7 +76,7 @@ class _SettingsFormState extends State<SettingsForm> {
 
 //        await UserService().updateUser(
 //          _currentUser.copyWith(
-//            firstName: _currentFirstName,
+//            userName: _currentuserName,
 //            lastName: _currentLastName,
 //            email: _currentEmail,
 //            groups: groups
@@ -143,9 +143,9 @@ class _SettingsFormState extends State<SettingsForm> {
                     SizedBox(height: 10.0),
                     InputTextField(
                       icon: Icons.person,
-                      initialValue: _currentUser.firstName,
+                      initialValue: _currentUser.userName,
                       labelText: 'First Name',
-                      onChanged: (value) => setState(() => _currentFirstName = value),
+                      onChanged: (value) => setState(() => _currentuserName = value),
                       validator: (value) => Validators.validateString(value, 'first name'),
                     ),
                     SizedBox(height: 10.0),

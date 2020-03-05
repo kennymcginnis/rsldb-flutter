@@ -1,5 +1,5 @@
-name: ringl8
-description: ringl8 - Running Late
+name: rsldb
+description: RAID Shadow Legends Database
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -20,7 +20,8 @@ dependencies:
   flutter:
     sdk: flutter
   auto_size_text: ^2.1.0
-  avataaar_image: ^1.0.8
+#  avataaar_image: ^1.0.8
+  cached_network_image: ^2.0.0
   cloud_firestore: ^0.13.0+1
   cupertino_icons: ^0.1.2
   firebase_auth: 0.15.2
@@ -45,7 +46,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^1.0.0
-  json_serializable: ^3.2.0
+  json_serializable: ^3.2.5
 
 
 # For information on the generic Dart part of this file, see the

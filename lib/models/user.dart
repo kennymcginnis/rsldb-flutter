@@ -1,31 +1,61 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:rsldb/models/user_group.dart';
+import 'package:rsldb/models/user_champion.dart';
 
 part 'user.g.dart';
 
-@JsonSerializable(anyMap: true)
+@JsonSerializable()
 class User {
   final String uid;
-  final String firstName;
-  final String lastName;
   final String email;
-  final String avatar;
-  final List<UserGroup> groups;
+  final String userName;
+  final List<UserChampion> champions;
+
+  // Grinding
+  final List<String> campaign;
+  final List<String> arenaDefense;
+  final List<String> arenaOffense;
+  final List<String> clanBoss;
+  final List<String> factionWars;
+
+  // Dungeons
+  final List<String> minotaursLabyrinth;
+  final List<String> spidersDen;
+  final List<String> fireKnightsCastle;
+  final List<String> dragonsLair;
+  final List<String> iceGolemsPeak;
+
+  // Potion
+  final List<String> voidKeep;
+  final List<String> forceKeep;
+  final List<String> spiritKeep;
+  final List<String> magicKeep;
 
   User({
     this.uid,
-    this.firstName,
-    this.lastName,
+    this.userName,
     this.email,
-    this.avatar,
-    this.groups,
+    this.champions,
+    this.campaign,
+    this.arenaDefense,
+    this.arenaOffense,
+    this.clanBoss,
+    this.factionWars,
+    this.minotaursLabyrinth,
+    this.spidersDen,
+    this.fireKnightsCastle,
+    this.dragonsLair,
+    this.iceGolemsPeak,
+    this.voidKeep,
+    this.forceKeep,
+    this.spiritKeep,
+    this.magicKeep,
   });
 
-  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
-
   Map<String, dynamic> toJson() => _$UserToJson(this);
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 
   factory User.fromFirebase(FirebaseUser firebaseUser) {
     return User(uid: firebaseUser.uid, email: firebaseUser.email);
@@ -34,28 +64,20 @@ class User {
   factory User.fromDocumentSnapshot(DocumentSnapshot documentSnapshot) {
     return User(
       uid: documentSnapshot.documentID,
-      firstName: documentSnapshot.data['firstName'] as String,
-      lastName: documentSnapshot.data['lastName'] as String,
       email: documentSnapshot.data['email'] as String,
-      avatar: documentSnapshot.data['avatar'] as String,
-      groups: (documentSnapshot.data['groups'] as List)
-          ?.map((e) => e == null ? null : UserGroup.fromJson(e as Map<String, dynamic>))
+      userName: documentSnapshot.data['userName'] as String,
+      champions: (documentSnapshot.data['champions'] as List)
+          ?.map((e) => e == null ? null : UserChampion.fromJson(e as Map<String, dynamic>))
           ?.toList(),
     );
   }
 
-  String fullName() => '${this.firstName} ${this.lastName}';
-
-  String initials() => '${this.firstName.substring(0, 1)}${this.lastName.substring(0, 1)}';
-
-  User copyWith({uid, firstName, lastName, email, avatar, groups}) {
+  User copyWith({uid, userName, lastName, email, avatar, groups}) {
     return User(
       uid: uid ?? this.uid,
-      firstName: firstName ?? this.firstName,
-      lastName: lastName ?? this.lastName,
       email: email ?? this.email,
-      avatar: avatar ?? this.avatar,
-      groups: groups ?? this.groups,
+      userName: userName ?? this.userName,
+      champions: champions ?? this.champions,
     );
   }
 }

@@ -10,7 +10,7 @@ class UserService {
   Future updateUser(User user) {
     return userCollection.document(application.currentUserUID).setData({
       'email': user.email,
-      'firstName': user.firstName,
+      'userName': user.userName,
       'lastName': user.lastName,
       'avatar': user.avatar,
     });

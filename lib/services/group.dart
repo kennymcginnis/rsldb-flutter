@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:rsldb/main.dart';
-import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/faction.dart';
 import 'package:rsldb/models/wrapper.dart';
 import 'package:rsldb/routes/app_state.dart';
 

@@ -1,6 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/faction.dart';
 import 'package:rsldb/routes/application.dart';
 
 class MembershipTile extends StatelessWidget {

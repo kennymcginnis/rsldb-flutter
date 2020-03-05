@@ -7,9 +7,9 @@ import 'package:rsldb/components/input_text_field.dart';
 import 'package:rsldb/helpers/flushbar.dart';
 import 'package:rsldb/helpers/validators.dart';
 import 'package:rsldb/main.dart';
-import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/faction.dart';
 import 'package:rsldb/routes/app_state.dart';
-import 'package:rsldb/services/group.dart';
+import 'package:rsldb/services/faction.dart';
 
 class CustomizeGroup extends StatefulWidget {
   @override

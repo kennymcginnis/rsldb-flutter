@@ -7,7 +7,7 @@ import 'package:rsldb/components/group_icon.dart';
 import 'package:rsldb/components/square_menu_button.dart';
 import 'package:rsldb/components/user_avatar.dart';
 import 'package:rsldb/main.dart';
-import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/faction.dart';
 import 'package:rsldb/models/user.dart';
 import 'package:rsldb/models/wrapper.dart';
 import 'package:rsldb/routes/app_state.dart';
@@ -29,7 +29,7 @@ class HomeComponent extends StatelessWidget {
           children: <Widget>[
             UserAvatar(user: _currentUser, size: AvatarSize.small),
             SizedBox(width: 10.0),
-            Text('RINGL8 (running late)'),
+            Text('rsldb (running late)'),
           ],
         ),
         centerTitle: true,

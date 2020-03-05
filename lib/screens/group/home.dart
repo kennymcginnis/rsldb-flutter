@@ -8,12 +8,12 @@ import 'package:rsldb/components/square_menu_button.dart';
 import 'package:rsldb/helpers/color_helpers.dart';
 import 'package:rsldb/main.dart';
 import 'package:rsldb/models/choice.dart';
-import 'package:rsldb/models/event.dart';
-import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/champion.dart';
+import 'package:rsldb/models/faction.dart';
 import 'package:rsldb/routes/app_state.dart';
 import 'package:rsldb/screens/calendar/styles.dart';
-import 'package:rsldb/services/event.dart';
-import 'package:rsldb/services/group.dart';
+import 'package:rsldb/services/champion.dart';
+import 'package:rsldb/services/faction.dart';
 
 class GroupHome extends StatelessWidget {
   final application = sl.get<AppState>();
@@ -21,7 +21,7 @@ class GroupHome extends StatelessWidget {
 
   final List<Choice> choices = <Choice>[
     Choice(title: "I'm off today.", status: RED),
-    Choice(title: 'RINGL8 (running late)', status: YELLOW),
+    Choice(title: 'rsldb (running late)', status: YELLOW),
     Choice(title: "I'm good to go!", status: GREEN),
   ];
 

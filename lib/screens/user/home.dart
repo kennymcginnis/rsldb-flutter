@@ -6,12 +6,12 @@ import 'package:rsldb/components/group_icon.dart';
 import 'package:rsldb/helpers/flushbar.dart';
 import 'package:rsldb/main.dart';
 import 'package:rsldb/models/choice.dart';
-import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/faction.dart';
 import 'package:rsldb/models/user_group.dart';
 import 'package:rsldb/models/wrapper.dart';
 import 'package:rsldb/routes/app_state.dart';
 import 'package:rsldb/routes/application.dart';
-import 'package:rsldb/services/group.dart';
+import 'package:rsldb/services/faction.dart';
 
 class UsersHome extends StatelessWidget {
   final application = sl.get<AppState>();

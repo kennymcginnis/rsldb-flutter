@@ -1,4 +1,4 @@
-import 'package:rsldb/models/group.dart';
+import 'package:rsldb/models/faction.dart';
 
 class AppState {
   String currentUserUID;
@@ -6,6 +6,4 @@ class AppState {
   String currentUserEmail;
 
   String currentGroupUID;
-
-  Group currentGroup;
 }

@@ -10,7 +10,7 @@ import 'package:rsldb/main.dart';
 import 'package:rsldb/models/choice.dart';
 import 'package:rsldb/models/user.dart';
 import 'package:rsldb/routes/app_state.dart';
-import 'package:rsldb/services/group.dart';
+import 'package:rsldb/services/faction.dart';
 
 class GroupMembers extends StatefulWidget {
   @override

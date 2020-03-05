@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
 import 'package:rsldb/main.dart';
-import 'package:rsldb/models/event.dart';
+import 'package:rsldb/models/champion.dart';
 import 'package:rsldb/routes/app_state.dart';
 
 class EventService {
