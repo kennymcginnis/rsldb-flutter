@@ -11,27 +11,19 @@ User _$UserFromJson(Map<String, dynamic> json) {
     uid: json['uid'] as String,
     userName: json['userName'] as String,
     email: json['email'] as String,
-    champions: (json['champions'] as List)
-        ?.map((e) =>
-            e == null ? null : UserChampion.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    champions: (json['champions'] as Map<String, dynamic>)?.map(
+      (k, e) => MapEntry(k, e == null ? null : Champion.fromJson(e as Map<String, dynamic>)),
+    ),
     campaign: (json['campaign'] as List)?.map((e) => e as String)?.toList(),
-    arenaDefense:
-        (json['arenaDefense'] as List)?.map((e) => e as String)?.toList(),
-    arenaOffense:
-        (json['arenaOffense'] as List)?.map((e) => e as String)?.toList(),
+    arenaDefense: (json['arenaDefense'] as List)?.map((e) => e as String)?.toList(),
+    arenaOffense: (json['arenaOffense'] as List)?.map((e) => e as String)?.toList(),
     clanBoss: (json['clanBoss'] as List)?.map((e) => e as String)?.toList(),
-    factionWars:
-        (json['factionWars'] as List)?.map((e) => e as String)?.toList(),
-    minotaursLabyrinth:
-        (json['minotaursLabyrinth'] as List)?.map((e) => e as String)?.toList(),
+    factionWars: (json['factionWars'] as List)?.map((e) => e as String)?.toList(),
+    minotaursLabyrinth: (json['minotaursLabyrinth'] as List)?.map((e) => e as String)?.toList(),
     spidersDen: (json['spidersDen'] as List)?.map((e) => e as String)?.toList(),
-    fireKnightsCastle:
-        (json['fireKnightsCastle'] as List)?.map((e) => e as String)?.toList(),
-    dragonsLair:
-        (json['dragonsLair'] as List)?.map((e) => e as String)?.toList(),
-    iceGolemsPeak:
-        (json['iceGolemsPeak'] as List)?.map((e) => e as String)?.toList(),
+    fireKnightsCastle: (json['fireKnightsCastle'] as List)?.map((e) => e as String)?.toList(),
+    dragonsLair: (json['dragonsLair'] as List)?.map((e) => e as String)?.toList(),
+    iceGolemsPeak: (json['iceGolemsPeak'] as List)?.map((e) => e as String)?.toList(),
     voidKeep: (json['voidKeep'] as List)?.map((e) => e as String)?.toList(),
     forceKeep: (json['forceKeep'] as List)?.map((e) => e as String)?.toList(),
     spiritKeep: (json['spiritKeep'] as List)?.map((e) => e as String)?.toList(),

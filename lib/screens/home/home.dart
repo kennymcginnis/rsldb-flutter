@@ -1,17 +1,11 @@
-import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:rsldb/components/group_icon.dart';
 import 'package:rsldb/components/square_menu_button.dart';
-import 'package:rsldb/components/user_avatar.dart';
 import 'package:rsldb/main.dart';
-import 'package:rsldb/models/faction.dart';
 import 'package:rsldb/models/user.dart';
-import 'package:rsldb/models/wrapper.dart';
 import 'package:rsldb/routes/app_state.dart';
-import 'package:rsldb/routes/application.dart';
 
 class HomeComponent extends StatelessWidget {
   final application = sl.get<AppState>();
@@ -21,13 +15,12 @@ class HomeComponent extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final childRatio = (size.width / size.height) * 2.5;
     User _currentUser = Provider.of<User>(context);
-    List<Group> _currentGroups = Provider.of<Membership>(context)?.membership ?? [];
     return Scaffold(
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            UserAvatar(user: _currentUser, size: AvatarSize.small),
+            // UserAvatar(user: _currentUser, size: AvatarSize.small),
             SizedBox(width: 10.0),
             Text('rsldb (running late)'),
           ],
@@ -54,20 +47,7 @@ class HomeComponent extends StatelessWidget {
                     crossAxisCount: 3,
                     mainAxisSpacing: 10,
                     crossAxisSpacing: 10,
-                    children: _currentGroups.map((Group group) {
-                      return GroupIcon(
-                        group,
-                        onTap: () {
-                          application.currentGroup = group;
-                          application.currentGroupUID = group.uid;
-                          return Application.router.navigateTo(
-                            context,
-                            '/group',
-                            transition: TransitionType.fadeIn,
-                          );
-                        },
-                      );
-                    }).toList(),
+                    children: [], // todo
                   ),
                 ],
               ),

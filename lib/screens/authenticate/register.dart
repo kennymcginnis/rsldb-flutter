@@ -26,11 +26,10 @@ class RegisterFormState extends State<RegisterForm> {
   String _userName;
   String _lastName;
   String _email = 'kenneth.j.mcginnis@gmail.com';
-  String _password = 'Millennia@9';
+  String _password = 'thefuture';
   String _error = '';
 
   void handleSubmit() async {
-
     if (_formKey.currentState.validate()) {
       setState(() => _loading = true);
       User user = await _authService.createUserWithEmailAndPassword(_email, _password);
@@ -40,10 +39,7 @@ class RegisterFormState extends State<RegisterForm> {
           _error = 'Could not register with those credentials';
         });
       } else {
-        await UserService().updateUser(user.copyWith(
-          userName: _userName,
-          lastName: _lastName,
-        ));
+        await UserService().updateUser(user.copyWith(userName: _userName));
         Application.router.navigateTo(context, '/', transition: TransitionType.fadeIn);
       }
     }
@@ -63,17 +59,9 @@ class RegisterFormState extends State<RegisterForm> {
               InputTextField(
                 icon: Icons.person,
                 initialValue: _userName,
-                labelText: 'First Name',
+                labelText: 'User Name',
                 onChanged: (value) => setState(() => _userName = value),
-                validator: (value) => Validators.validateString(value, 'first name'),
-              ),
-              SizedBox(height: 10.0),
-              InputTextField(
-                icon: Icons.person,
-                initialValue: _lastName,
-                labelText: 'Last Name',
-                onChanged: (value) => setState(() => _lastName = value),
-                validator: (value) => Validators.validateString(value, 'last name'),
+                validator: (value) => Validators.validateString(value, 'user name'),
               ),
               SizedBox(height: 10.0),
               InputTextField(

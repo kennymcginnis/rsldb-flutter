@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:rsldb/models/champion.dart';
 import 'package:rsldb/models/user_champion.dart';
 
 part 'user.g.dart';
@@ -10,7 +11,7 @@ class User {
   final String uid;
   final String email;
   final String userName;
-  final List<UserChampion> champions;
+  final Map<String, Champion> champions;
 
   // Grinding
   final List<String> campaign;
@@ -66,9 +67,6 @@ class User {
       uid: documentSnapshot.documentID,
       email: documentSnapshot.data['email'] as String,
       userName: documentSnapshot.data['userName'] as String,
-      champions: (documentSnapshot.data['champions'] as List)
-          ?.map((e) => e == null ? null : UserChampion.fromJson(e as Map<String, dynamic>))
-          ?.toList(),
     );
   }
 

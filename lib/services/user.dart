@@ -8,29 +8,20 @@ class UserService {
   final application = sl.get<AppState>();
 
   Future updateUser(User user) {
-    return userCollection.document(application.currentUserUID).setData({
+    return userCollection.document(user.uid).setData({
       'email': user.email,
       'userName': user.userName,
-      'lastName': user.lastName,
-      'avatar': user.avatar,
     });
   }
 
-  List<User> userListFromSnapshot(QuerySnapshot querySnapshot) {
-    return querySnapshot.documents
-        .map((documentSnapshot) => User.fromDocumentSnapshot(documentSnapshot))
-        .toList();
+  Future updateUserChampion(User user) {
+    return userCollection.document(user.uid).setData({'champions': user.champions});
   }
 
-  Stream<User> get user {
-    if (application.currentUserUID == null) return null;
+  Stream<User> user(String user) {
     return userCollection
         .document(application.currentUserUID)
         .snapshots()
         .map((documentSnapshot) => User.fromDocumentSnapshot(documentSnapshot));
-  }
-
-  Stream<List<User>> groupMembers(List<String> users) {
-    return userCollection.where('uid', whereIn: users).snapshots().map(userListFromSnapshot);
   }
 }

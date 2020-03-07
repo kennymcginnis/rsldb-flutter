@@ -3,82 +3,29 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rsldb/main.dart';
 import 'package:rsldb/models/auth_user.dart';
+import 'package:rsldb/models/user.dart';
 import 'package:rsldb/routes/app_state.dart';
-import 'package:rsldb/routes/stream_providers.dart';
 import 'package:rsldb/screens/authenticate/auth_form.dart';
-import 'package:rsldb/screens/group/customize.dart';
-import 'package:rsldb/screens/group/home.dart';
-import 'package:rsldb/screens/group/members.dart';
 import 'package:rsldb/screens/home/home.dart';
-import 'package:rsldb/screens/user/defaults.dart';
-import 'package:rsldb/screens/user/home.dart';
-import 'package:rsldb/screens/user/settings.dart';
 import 'package:rsldb/services/auth.dart';
+import 'package:rsldb/services/user.dart';
 
 final application = sl.get<AppState>();
 
 var authHandler = Handler(handlerFunc: (BuildContext context, _) {
   AuthUser _currentUser = Provider.of<AuthUser>(context);
   if (_currentUser == null) return AuthForm();
-  application.currentUserUID = _currentUser.uid;
-  application.currentUserEmail = _currentUser.email;
   return MultiProvider(
     providers: [
-      userProvider(),
+      StreamProvider<User>.value(
+        value: UserService().user(_currentUser.uid),
+      )
     ],
     child: HomeComponent(),
   );
 });
 
-var groupHandler = Handler(handlerFunc: (BuildContext context, _) {
-  return MultiProvider(
-    providers: [
-      currentEventProvider(),
-    ],
-    child: GroupHome(),
-  );
-});
-
-var customizeHandler = Handler(handlerFunc: (BuildContext context, _) => CustomizeGroup());
-
-var membersHandler = Handler(handlerFunc: (BuildContext context, _) {
-  return MultiProvider(
-    providers: [
-    ],
-    child: GroupMembers(),
-  );
-});
-
-var groupsHandler = Handler(handlerFunc: (BuildContext context, _) {
-  return MultiProvider(
-    providers: [
-      invitationsProvider(),
-    ],
-    child: UsersHome(),
-  );
-});
-
-var defaultsHandler = Handler(handlerFunc: (BuildContext context, _) {
-  return MultiProvider(
-    providers: [
-      userProvider(),
-    ],
-    child: UsersGroupDefaults(),
-  );
-});
-
-var settingsHandler = Handler(handlerFunc: (BuildContext context, _) {
-  return MultiProvider(
-    providers: [
-      userProvider(),
-    ],
-    child: SettingsForm(),
-  );
-});
-
 var logoutHandler = Handler(handlerFunc: (BuildContext context, _) {
   AuthService().signOut();
-  application.currentUserUID = null;
-  application.currentUserEmail = null;
   return AuthForm();
 });

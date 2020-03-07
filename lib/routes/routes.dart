@@ -3,16 +3,6 @@ import 'package:rsldb/routes/route_handlers.dart';
 
 class Routes {
   static String root = '/';
-  static String today = '/today';
-  static String groups = '/groups';
-  static String group = '/group';
-  static String customize = '/customize';
-  static String members = '/members';
-  static String chat = '/chat';
-  static String calendar = '/calendar';
-  static String invitations = '/groups';
-  static String defaults = '/defaults';
-  static String settings = '/settings';
   static String logout = '/logout';
 
   static void configureRoutes(Router router) {
@@ -21,12 +11,6 @@ class Routes {
       return null;
     });
     router.define(root, handler: authHandler);
-    router.define(group, handler: groupHandler);
-    router.define(customize, handler: customizeHandler);
-    router.define(members, handler: membersHandler);
-    router.define(groups, handler: groupsHandler);
-    router.define(defaults, handler: defaultsHandler);
-    router.define(settings, handler: settingsHandler);
     router.define(logout, handler: logoutHandler);
   }
 }
