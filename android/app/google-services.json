@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "763761630796",
+    "firebase_url": "https://rsl-db.firebaseio.com",
+    "project_id": "rsl-db",
+    "storage_bucket": "rsl-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763761630796:android:d8647c1fcadbeb51b69ee9",
+        "android_client_info": {
+          "package_name": "com.rsl.db"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763761630796-b7msph6qbknjgosuu1fs3rld6vnrv821.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEKXSwI2oHpPmMO5u5B2phLt79_nNXJcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763761630796-b7msph6qbknjgosuu1fs3rld6vnrv821.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

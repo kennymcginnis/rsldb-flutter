@@ -1,4 +1,4 @@
-package com.example.rsldb
+package com.rsl.db
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
