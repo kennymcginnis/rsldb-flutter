@@ -18,7 +18,7 @@ var authHandler = Handler(handlerFunc: (BuildContext context, _) {
   return MultiProvider(
     providers: [
       StreamProvider<User>.value(
-        value: UserService().user // (_currentUser.uid),
+        value: UserService().user(_currentUser.uid),
       )
     ],
     child: HomeComponent(),

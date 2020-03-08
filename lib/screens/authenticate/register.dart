@@ -25,7 +25,7 @@ class RegisterFormState extends State<RegisterForm> {
   bool _loading = false;
   String _userName;
   String _email = 'kenneth.j.mcginnis@gmail.com';
-  String _password = 'thefuture';
+  String _password = 'Millennia@9';
   String _error = '';
 
   void handleSubmit() async {

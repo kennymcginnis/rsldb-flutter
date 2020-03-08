@@ -22,7 +22,7 @@ class LoginFormState extends State<LoginForm> {
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
   String email = 'kenneth.j.mcginnis@gmail.com';
-  String password = 'thefuture';
+  String password = 'Millennia@9';
   String error = '';
 
   void handleSubmit() async {
@@ -110,7 +110,8 @@ class LoginFormState extends State<LoginForm> {
                         padding: EdgeInsets.only(left: 15.0, right: 15.0),
                         child: Text(
                           "Or",
-                          style: TextStyle(color: Colors.white, fontSize: 16.0, fontFamily: "WorkSansMedium"),
+                          style: TextStyle(
+                              color: Colors.white, fontSize: 16.0, fontFamily: "WorkSansMedium"),
                         ),
                       ),
                       Container(

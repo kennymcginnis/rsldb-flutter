@@ -15,10 +15,9 @@ class UserService {
     return userCollection.document(user.uid).setData({'champions': user.champions});
   }
 
-//  Stream<User> user(String uid) {
-  Stream<User> get user {
+  Stream<User> user(String uid) {
     return userCollection
-        .document("uid")
+        .document(uid)
         .snapshots()
         .map((documentSnapshot) => User.fromDocumentSnapshot(documentSnapshot));
   }

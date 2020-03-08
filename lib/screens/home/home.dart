@@ -12,15 +12,14 @@ class HomeComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final childRatio = (size.width / size.height) * 2.5;
-//    User _currentUser = Provider.of<User>(context);
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false, // Used for removing back button.
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-//            UserAvatar(user: _currentUser, size: AvatarSize.small),
             SizedBox(width: 10.0),
-            Text('rsldb (running late)'),
+            Text('RAID Shadow Legends Database'),
           ],
         ),
         centerTitle: true,
@@ -29,30 +28,6 @@ class HomeComponent extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Padding(
-            padding: EdgeInsets.all(18.0),
-            child: Text('My Groups:', style: TextStyle(fontSize: 18.0)),
-          ),
-          /*
-          Expanded(
-            flex: 5,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25),
-              child: Column(
-                children: <Widget>[
-                  GridView.count(
-                    shrinkWrap: true,
-                    childAspectRatio: 1,
-                    crossAxisCount: 3,
-                    mainAxisSpacing: 10,
-                    crossAxisSpacing: 10,
-                    children: [], // todo
-                  ),
-                ],
-              ),
-            ),
-          ),
-          */
           Expanded(
             flex: 5,
             child: Padding(

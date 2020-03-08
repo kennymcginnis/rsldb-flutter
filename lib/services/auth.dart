@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:rsldb/models/auth_user.dart';
+import 'package:rsldb/models/user.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -30,7 +31,7 @@ class AuthService {
         email: email,
         password: password,
       );
-      return AuthUser.fromFirebase(result.user);
+      return User.fromFirebase(result.user);
     } catch (e) {
       print(e.toString());
       return null;
