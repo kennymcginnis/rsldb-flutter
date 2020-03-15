@@ -13,7 +13,7 @@ class UserChampion {
   final int rank;
   final int ascension;
 
-  final Map<String, dynamic> ratings;
+  final Map<String, int> ratings;
 
   UserChampion({
     this.uid,
@@ -32,8 +32,12 @@ class UserChampion {
   factory UserChampion.fromDocumentSnapshot(DocumentSnapshot documentSnapshot) {
     return UserChampion(
       uid: documentSnapshot.documentID,
+      user: documentSnapshot.data['user'] as String,
+      champion: documentSnapshot.data['champion'] as String,
+      acquired: documentSnapshot.data['acquired'] as int,
       rank: documentSnapshot.data['rank'] as int,
       ascension: documentSnapshot.data['ascension'] as int,
+      ratings: documentSnapshot.data['ratings'] as Map<String, dynamic>,
     );
   }
 

@@ -5,11 +5,7 @@ import 'package:rsldb/models/user.dart';
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  Stream<AuthUser> get user {
-    return _auth.onAuthStateChanged.map((user) {
-      return user != null ? AuthUser.fromFirebase(user) : null;
-    });
-  }
+  Stream<AuthUser> get user => _auth.onAuthStateChanged.map((user) => AuthUser.fromFirebase(user));
 
   Future signInWithEmailAndPassword(String email, String password) async {
     try {
@@ -24,8 +20,7 @@ class AuthService {
     }
   }
 
-  Future createUserWithEmailAndPassword(String email, String password,
-      {String userName, String lastName}) async {
+  Future createUserWithEmailAndPassword(String email, String password, {String userName}) async {
     try {
       AuthResult result = await _auth.createUserWithEmailAndPassword(
         email: email,

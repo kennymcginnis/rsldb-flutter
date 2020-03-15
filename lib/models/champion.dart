@@ -5,10 +5,10 @@ part 'champion.g.dart';
 
 @JsonSerializable()
 class Champion {
-  final String uid;
-  final String name;
+  String uid;
+  String name;
 
-  final Map<String, dynamic> attributes;
+  Map<String, dynamic> attributes;
 
   Champion({this.uid, this.name, this.attributes});
 

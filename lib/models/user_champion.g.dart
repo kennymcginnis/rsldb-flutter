@@ -14,7 +14,9 @@ UserChampion _$UserChampionFromJson(Map<String, dynamic> json) {
     acquired: json['acquired'] as int,
     rank: json['rank'] as int,
     ascension: json['ascension'] as int,
-    ratings: json['ratings'] as Map<String, dynamic>,
+    ratings: (json['ratings'] as Map<String, dynamic>)?.map(
+      (k, e) => MapEntry(k, e as int),
+    ),
   );
 }
 

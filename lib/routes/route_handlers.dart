@@ -3,11 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rsldb/main.dart';
 import 'package:rsldb/models/auth_user.dart';
+import 'package:rsldb/models/champion.dart';
+import 'package:rsldb/models/code_name.dart';
 import 'package:rsldb/models/user.dart';
 import 'package:rsldb/routes/app_state.dart';
 import 'package:rsldb/screens/authenticate/auth_form.dart';
 import 'package:rsldb/screens/home/home.dart';
 import 'package:rsldb/services/auth.dart';
+import 'package:rsldb/services/champion.dart';
+import 'package:rsldb/services/code_name.dart';
 import 'package:rsldb/services/user.dart';
 
 final application = sl.get<AppState>();
@@ -19,6 +23,12 @@ var authHandler = Handler(handlerFunc: (BuildContext context, _) {
     providers: [
       StreamProvider<User>.value(
         value: UserService().user(_currentUser.uid),
+      ),
+      StreamProvider<List<CodeName>>.value(
+        value: CodeNameService().codeNames,
+      ),
+      StreamProvider<List<Champion>>.value(
+        value: ChampionService().champions,
       )
     ],
     child: HomeComponent(),

@@ -7,10 +7,21 @@ part 'code_name.g.dart';
 class CodeName {
   final String uid;
   final String type;
+  final String subtype;
   final String name;
+  final String description;
   final String url;
+  final List<String> children;
 
-  CodeName({this.uid, this.type, this.name, this.url});
+  CodeName({
+    this.uid,
+    this.type,
+    this.subtype,
+    this.name,
+    this.description,
+    this.url,
+    this.children,
+  });
 
   factory CodeName.fromJson(Map<String, dynamic> json) => _$CodeNameFromJson(json);
 
@@ -22,6 +33,7 @@ class CodeName {
       type: documentSnapshot.data['type'] as String,
       name: documentSnapshot.data['name'] as String,
       url: documentSnapshot.data['url'] as String,
+      children: (documentSnapshot.data['children'] as List)?.map((e) => e as String)?.toList(),
     );
   }
 
@@ -31,6 +43,7 @@ class CodeName {
       type: codeName.type ?? this.type,
       name: codeName.name ?? this.name,
       url: codeName.url ?? this.url,
+      children: codeName.children ?? this.children,
     );
   }
 }

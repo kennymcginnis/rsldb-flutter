@@ -15,12 +15,11 @@ class HomeComponent extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false, // Used for removing back button.
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(width: 10.0),
-            Text('RAID Shadow Legends Database'),
+            Text('Index - All Champions'),
           ],
         ),
         centerTitle: true,
@@ -39,26 +38,7 @@ class HomeComponent extends StatelessWidget {
                 crossAxisCount: 2,
                 mainAxisSpacing: 5,
                 crossAxisSpacing: 5,
-                children: [
-                  MenuButtonImage(
-                    image: 'assets/index.png',
-                    navigateTo: '/index',
-                  ),
-                  MenuButtonImage(
-                    image: 'assets/champions.png',
-                    navigateTo: '/champions',
-                  ),
-                  MenuButtonText(
-                    icon: Icons.settings,
-                    text: 'Settings',
-                    navigateTo: '/settings',
-                  ),
-                  MenuButtonText(
-                    icon: Icons.exit_to_app,
-                    text: 'Log Out',
-                    navigateTo: '/logout',
-                  ),
-                ],
+                children: [],
               ),
             ),
           )

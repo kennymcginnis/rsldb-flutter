@@ -20,7 +20,6 @@ dependencies:
   flutter:
     sdk: flutter
   auto_size_text: ^2.1.0
-#  avataaar_image: ^1.0.8
   cached_network_image: ^2.0.0
   cloud_firestore: ^0.13.0+1
   cupertino_icons: ^0.1.2
@@ -62,8 +61,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-#  assets:
-#    - assets/
+  assets:
+    - assets/
 #    - assets/months/
 
   # An image asset can refer to one or more resolution-specific "variants", see

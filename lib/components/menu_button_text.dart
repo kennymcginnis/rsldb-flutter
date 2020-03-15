@@ -3,12 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rsldb/routes/application.dart';
 
-class SquareMenuButton extends StatelessWidget {
+class MenuButtonText extends StatelessWidget {
   final IconData icon;
   final String text;
   final String navigateTo;
 
-  SquareMenuButton({this.icon, this.text, this.navigateTo});
+  MenuButtonText({this.icon, this.text, this.navigateTo});
 
   @override
   Widget build(BuildContext context) {
