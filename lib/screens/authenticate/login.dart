@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:rsldb/components/extended_button.dart';
+import 'package:rsldb/components/horizontal_divider.dart';
 import 'package:rsldb/components/input_text_field.dart';
 import 'package:rsldb/components/loading.dart';
 import 'package:rsldb/helpers/validators.dart';
@@ -85,53 +86,7 @@ class LoginFormState extends State<LoginForm> {
                     ),
                   ),
                 ),
-                Padding(
-                  // or-divider
-                  padding: EdgeInsets.only(top: 10.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                          gradient: new LinearGradient(
-                              colors: [
-                                Colors.white10,
-                                Colors.white,
-                              ],
-                              begin: const FractionalOffset(0.0, 0.0),
-                              end: const FractionalOffset(1.0, 1.0),
-                              stops: [0.0, 1.0],
-                              tileMode: TileMode.clamp),
-                        ),
-                        width: 100.0,
-                        height: 1.0,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 15.0, right: 15.0),
-                        child: Text(
-                          "Or",
-                          style: TextStyle(
-                              color: Colors.white, fontSize: 16.0, fontFamily: "WorkSansMedium"),
-                        ),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          gradient: new LinearGradient(
-                              colors: [
-                                Colors.white,
-                                Colors.white10,
-                              ],
-                              begin: const FractionalOffset(0.0, 0.0),
-                              end: const FractionalOffset(1.0, 1.0),
-                              stops: [0.0, 1.0],
-                              tileMode: TileMode.clamp),
-                        ),
-                        width: 100.0,
-                        height: 1.0,
-                      ),
-                    ],
-                  ),
-                ),
+                HorizontalDivider(text: "OR"),
                 Row(
                   key: ValueKey('facebook-google'),
                   mainAxisAlignment: MainAxisAlignment.center,

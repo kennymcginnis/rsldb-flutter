@@ -3,6 +3,7 @@ import 'package:rsldb/routes/route_handlers.dart';
 
 class Routes {
   static String root = '/';
+  static String index = '/index';
   static String logout = '/logout';
 
   static void configureRoutes(Router router) {
@@ -11,6 +12,7 @@ class Routes {
       return null;
     });
     router.define(root, handler: authHandler);
+    router.define(index, handler: indexHandler);
     router.define(logout, handler: logoutHandler);
   }
 }

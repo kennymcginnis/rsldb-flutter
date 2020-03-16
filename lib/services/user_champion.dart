@@ -1,12 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:rsldb/main.dart';
 import 'package:rsldb/models/user_champion.dart';
+import 'package:rsldb/routes/app_state.dart';
 import 'package:rsldb/services/user.dart';
 
 class UserChampionService {
   final UserService userService = new UserService();
+  final application = sl.get<AppState>();
 
   final CollectionReference userChampionCollection =
-      Firestore.instance.collection('usersChampions');
+      Firestore.instance.collection('users_champions');
 
   Future updateUsersChampions(UserChampion userChampion) =>
       userChampionCollection.document(userChampion.uid).setData({
@@ -35,8 +38,18 @@ class UserChampionService {
           .map((documentSnapshot) => UserChampion.fromDocumentSnapshot(documentSnapshot))
           .toList();
 
-  Stream<List<UserChampion>> user(String userUID) => userChampionCollection
-      .where('user', isEqualTo: userUID)
+  Map<String, UserChampion> userChampionMapFromSnapshot(QuerySnapshot querySnapshot) {
+    List<UserChampion> champions = userChampionListFromSnapshot(querySnapshot);
+    return {for (var v in champions) v.uid: v};
+  }
+
+  Stream<List<UserChampion>> get usersChampions => userChampionCollection
+      .where('user', isEqualTo: application.currentUserUID)
       .snapshots()
       .map(userChampionListFromSnapshot);
+
+  Stream<Map<String, UserChampion>> get usersChampionMap => userChampionCollection
+      .where('user', isEqualTo: application.currentUserUID)
+      .snapshots()
+      .map(userChampionMapFromSnapshot);
 }
