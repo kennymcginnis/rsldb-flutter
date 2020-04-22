@@ -14,7 +14,7 @@ description: RAID Shadow Legends Database
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.3.0-dev <3.0.0"
+  sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -30,14 +30,16 @@ dependencies:
   flushbar: ^1.9.1
   flutter_colorpicker: any
   flutter_inner_drawer: ^0.5.4
+  flutter_rating_bar: ^3.0.1+1
   flutter_spinkit: ^4.1.1+1
   font_awesome_flutter: ^8.5.0
   get_it: ^3.1.0
+  getflutter: ^1.0.10
   http: ^0.12.0+2
   intl: ^0.16.0
   json_annotation: ^3.0.0
+  path_provider: ^1.6.5
   provider: ^3.2.0
-  recase: ^2.0.1
   shared_preferences: ^0.5.6
   table_calendar: ^2.2.1
   unicorndial: ^1.1.5

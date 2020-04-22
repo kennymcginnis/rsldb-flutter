@@ -1,5 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:rsldb/helpers/service_utils.dart';
+import 'package:rsldb/main.dart';
+import 'package:rsldb/models/champion.dart';
+import 'package:rsldb/routes/app_state.dart';
 
 part 'user_champion.g.dart';
 
@@ -38,6 +42,18 @@ class UserChampion {
       rank: documentSnapshot.data['rank'] as int,
       ascension: documentSnapshot.data['ascension'] as int,
       ratings: documentSnapshot.data['ratings'] as Map<String, dynamic>,
+    );
+  }
+
+  factory UserChampion.fromChampion(Champion champion) {
+    final application = sl.get<AppState>();
+    return UserChampion(
+      user: application.currentUserUID,
+      champion: champion.uid,
+      acquired: 0,
+      rank: defaultRank(application.codeNameMap[champion.attributes["rarity"]].name),
+      ascension: 0,
+      ratings: new Map<String, int>(),
     );
   }
 

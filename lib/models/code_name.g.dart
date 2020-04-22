@@ -14,6 +14,7 @@ CodeName _$CodeNameFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     description: json['description'] as String,
     url: json['url'] as String,
+    order: json['order'] as int,
     children: (json['children'] as List)?.map((e) => e as String)?.toList(),
   );
 }
@@ -25,5 +26,6 @@ Map<String, dynamic> _$CodeNameToJson(CodeName instance) => <String, dynamic>{
       'name': instance.name,
       'description': instance.description,
       'url': instance.url,
+      'order': instance.order,
       'children': instance.children,
     };

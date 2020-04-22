@@ -10,6 +10,8 @@ Champion _$ChampionFromJson(Map<String, dynamic> json) {
   return Champion(
     uid: json['uid'] as String,
     name: json['name'] as String,
+    image: json['image'] as String,
+    avatar: json['avatar'] as String,
     attributes: json['attributes'] as Map<String, dynamic>,
   );
 }
@@ -17,5 +19,7 @@ Champion _$ChampionFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$ChampionToJson(Champion instance) => <String, dynamic>{
       'uid': instance.uid,
       'name': instance.name,
+      'image': instance.image,
+      'avatar': instance.avatar,
       'attributes': instance.attributes,
     };

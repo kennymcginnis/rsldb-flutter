@@ -5,12 +5,14 @@ part 'champion.g.dart';
 
 @JsonSerializable()
 class Champion {
-  String uid;
-  String name;
+  final String uid;
+  final String name;
+  String image;
+  final String avatar;
 
   Map<String, dynamic> attributes;
 
-  Champion({this.uid, this.name, this.attributes});
+  Champion({this.uid, this.name, this.image, this.avatar, this.attributes});
 
   Map<String, dynamic> toJson() => _$ChampionToJson(this);
 
@@ -20,6 +22,8 @@ class Champion {
     return Champion(
       uid: documentSnapshot.documentID,
       name: documentSnapshot.data['name'],
+      image: documentSnapshot.data['image'],
+      avatar: documentSnapshot.data['avatar'],
       attributes: documentSnapshot.data['attributes'],
     );
   }
@@ -28,6 +32,8 @@ class Champion {
     return Champion(
       uid: uid ?? this.uid,
       name: name ?? this.name,
+      image: image ?? this.image,
+      avatar: avatar ?? this.avatar,
       attributes: attributes ?? this.attributes,
     );
   }

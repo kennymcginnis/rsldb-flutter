@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
-import 'package:rsldb/models/auth_user.dart';
 import 'package:rsldb/routes/app_state.dart';
 import 'package:rsldb/routes/application.dart';
 import 'package:rsldb/routes/routes.dart';
-import 'package:rsldb/services/auth.dart';
+import 'package:rsldb/routes/stream_providers.dart';
 import 'package:rsldb/theme/theme.dart';
 
 // This is our global ServiceLocator
@@ -35,8 +34,12 @@ class AppComponentState extends State<AppComponent> {
 
   @override
   Widget build(BuildContext context) {
-    return StreamProvider<AuthUser>.value(
-      value: AuthService().user,
+    return MultiProvider(
+      providers: [
+        authUserProvider,
+        codeNamesProvider,
+        championsProvider,
+      ],
       child: MaterialApp(
         title: 'rsldb',
         debugShowCheckedModeBanner: false,

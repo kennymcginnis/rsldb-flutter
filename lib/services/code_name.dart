@@ -29,17 +29,18 @@ class CodeNameService {
 
   Stream<List<CodeName>> get codeNames =>
       codeNameCollection.snapshots().map(codeNameListFromSnapshot);
+      //.orderBy("order")
 
   Map<String, CodeName> codeNameMap(List<CodeName> codeNames) =>
       {for (var v in codeNames) v.uid: v};
 
   Map<String, List<CodeName>> codeNamesByType(List<CodeName> codeNames) {
     Map<String, List<CodeName>> output = new Map<String, List<CodeName>>();
-    for (CodeName cn in codeNames) {
-      if (output.containsKey(cn.type)) {
-        output[cn.type].add(cn);
+    for (CodeName codeName in codeNames) {
+      if (output.containsKey(codeName.type)) {
+        output[codeName.type].add(codeName);
       } else {
-        output[cn.type] = [cn];
+        output[codeName.type] = [codeName];
       }
     }
     return output;

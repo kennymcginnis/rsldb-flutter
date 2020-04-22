@@ -1,14 +1,22 @@
 import 'package:provider/provider.dart';
+import 'package:rsldb/models/auth_user.dart';
 import 'package:rsldb/models/champion.dart';
 import 'package:rsldb/models/champion_ability.dart';
 import 'package:rsldb/models/code_name.dart';
 import 'package:rsldb/models/user.dart';
 import 'package:rsldb/models/user_champion.dart';
+import 'package:rsldb/services/auth.dart';
 import 'package:rsldb/services/champion.dart';
 import 'package:rsldb/services/champion_ability.dart';
 import 'package:rsldb/services/code_name.dart';
 import 'package:rsldb/services/user.dart';
 import 'package:rsldb/services/user_champion.dart';
+
+StreamProvider<AuthUser> get authUserProvider {
+  return StreamProvider<AuthUser>.value(
+    value: AuthService().user,
+  );
+}
 
 StreamProvider<User> get userProvider {
   return StreamProvider<User>.value(

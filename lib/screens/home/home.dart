@@ -8,10 +8,34 @@ import 'package:rsldb/routes/app_state.dart';
 class HomeComponent extends StatelessWidget {
   final application = sl.get<AppState>();
 
+/*
+  static var httpClient = new HttpClient();
+  
+  // /data/user/0/com.rsl.db/app_flutter
+  Future<File> _downloadFile(String url, String filename) async {
+    var request = await httpClient.getUrl(Uri.parse(url));
+    var response = await request.close();
+    var bytes = await consolidateHttpClientResponseBytes(response);
+    String dir = (await getApplicationDocumentsDirectory()).path;
+    File file = new File('$dir/$filename');
+    await file.writeAsBytes(bytes);
+    return file;
+  }
+*/
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final childRatio = (size.width / size.height) * 2.5;
+
+/*
+    List<Champion> champions = Provider.of<List<Champion>>(context) ?? [];
+    if (champions.length > 0) {
+      champions.forEach((Champion c) {
+        _downloadFile(c.avatar, c.avatar.substring(c.avatar.lastIndexOf("/")));
+      });
+    }
+*/
 
     return Scaffold(
       appBar: AppBar(

@@ -48,8 +48,6 @@ class UserChampionService {
       .snapshots()
       .map(userChampionListFromSnapshot);
 
-  Stream<Map<String, UserChampion>> get usersChampionMap => userChampionCollection
-      .where('user', isEqualTo: application.currentUserUID)
-      .snapshots()
-      .map(userChampionMapFromSnapshot);
+  Map<String, UserChampion> usersChampionsMap(List<UserChampion> userChampions) =>
+      {for (var v in userChampions) v.uid: v};
 }

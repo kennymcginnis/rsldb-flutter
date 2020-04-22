@@ -6,6 +6,8 @@ class ChampionService {
 
   Future updateChampion(Champion champion) => championCollection.document(champion.uid).setData({
         'name': champion.name,
+        'image': champion.image,
+        'avatar': champion.avatar,
         'attributes': champion.attributes,
       });
 
@@ -21,6 +23,6 @@ class ChampionService {
   Stream<List<Champion>> get champions =>
       championCollection.snapshots().map(championListFromSnapshot);
 
-  Stream<Map<String, Champion>> get championMap =>
-      championCollection.snapshots().map(championMapFromSnapshot);
+  Map<String, Champion> championMap(List<Champion> champions) =>
+      {for (var v in champions) v.uid: v};
 }
